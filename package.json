@@ -2,7 +2,7 @@
   "name": "@f/load-image",
   "description": "Load an image in the browser to ensure it is available to be rendered immediately",
   "repository": "git://github.com/micro-js/load-image.git",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
