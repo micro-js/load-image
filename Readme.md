@@ -19,19 +19,17 @@ var loadImage = require('@f/load-image')
 
 function allImagesLoaded () {
   return Promise.all(
-  [].slice.call(document.querySelectorAll('img'))
-    .map(img => new Promise((resolve, reject) => loadImage(img, err => err ? reject(err) : resolve()))))
+  [].slice.call(document.querySelectorAll('img')).map(img => loadImage(img.getAttribute('src')))
 }
 ```
 
 ## API
 
-### loadImage(url, cb)
+### loadImage(url)
 
 - `url` - Url of the image you want to load
-- `cb` - Callback to call when the image is done loading. Receives `err` as its first parameter if an error occurs.
 
-**Returns:**
+**Returns:** A promise that resolves when the image is loaded or rejects if an error occurs.
 
 ## License
 
